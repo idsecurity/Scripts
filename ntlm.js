@@ -8,6 +8,10 @@ importPackage(Packages.org.apache.commons.codec.binary);
 * Convert a password to a NTLMv1 hash
 * NTLM hash is the password converted to UTF-16LE and then a MD4 hash is performed on the UTF-16LE password
 * 
+* Uses the JDK internal sun.security.provider.MD4 class which means it won't work on anything newer than Java 8.
+*
+* Requires that the Apache Commons Codec library is on the classpath.
+* 
 * @author Aleksandar Mujadin
 * @since 2014-09-29
 */
